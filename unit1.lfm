@@ -1,0 +1,156 @@
+object Principal: TPrincipal
+  Left = 350
+  Height = 437
+  Top = 250
+  Width = 818
+  Caption = 'Principal'
+  ClientHeight = 437
+  ClientWidth = 818
+  OnCreate = FormCreate
+  object PageControl1: TPageControl
+    Left = 0
+    Height = 437
+    Top = 0
+    Width = 818
+    TabStop = False
+    ActivePage = TabSheet2
+    Align = alClient
+    TabIndex = 1
+    TabOrder = 0
+    OnChange = PageControl1Change
+    object TabSheet1: TTabSheet
+      Caption = 'TabSheet1'
+      ClientHeight = 409
+      ClientWidth = 810
+      object GroupBox1: TGroupBox
+        Left = 8
+        Height = 136
+        Top = 8
+        Width = 240
+        Caption = 'Banco de Dados'
+        ClientHeight = 116
+        ClientWidth = 236
+        TabOrder = 0
+        OnClick = GroupBox1Click
+        object EditIP: TEdit
+          Left = 2
+          Height = 23
+          Top = 16
+          Width = 104
+          TabOrder = 0
+          Text = 'localhost'
+        end
+        object EditPorta: TEdit
+          Left = 112
+          Height = 23
+          Top = 16
+          Width = 40
+          TabOrder = 1
+          Text = '5432'
+        end
+        object Label1: TLabel
+          Left = 2
+          Height = 15
+          Top = 0
+          Width = 10
+          Caption = 'IP'
+          OnClick = Label1Click
+        end
+        object LabelPorta: TLabel
+          Left = 112
+          Height = 15
+          Top = 0
+          Width = 28
+          Caption = 'Porta'
+        end
+        object EditBanco: TEdit
+          Left = 160
+          Height = 23
+          Top = 16
+          Width = 72
+          TabOrder = 2
+          OnChange = EditBancoChange
+        end
+        object LabelBanco: TLabel
+          Left = 160
+          Height = 15
+          Top = 0
+          Width = 33
+          Caption = 'Banco'
+        end
+        object EditUsuario: TEdit
+          Left = 2
+          Height = 23
+          Top = 56
+          Width = 150
+          TabOrder = 3
+          Text = 'postgres'
+          OnChange = EditBancoChange
+        end
+        object EditSenha: TEdit
+          Left = 160
+          Height = 23
+          Top = 56
+          Width = 72
+          TabOrder = 4
+          Text = '123456'
+          OnChange = EditBancoChange
+        end
+        object LabelUsuario: TLabel
+          Left = 2
+          Height = 15
+          Top = 40
+          Width = 40
+          Caption = 'Usuario'
+          OnClick = Label1Click
+        end
+        object LabelSenha: TLabel
+          Left = 160
+          Height = 15
+          Top = 40
+          Width = 32
+          Caption = 'Senha'
+          OnClick = Label1Click
+        end
+        object BtCriarBanco: TButton
+          Left = 2
+          Height = 25
+          Top = 88
+          Width = 75
+          Caption = 'Criar Banco'
+          TabOrder = 5
+        end
+        object BtLogin: TButton
+          Left = 157
+          Height = 25
+          Top = 88
+          Width = 75
+          Caption = 'Login'
+          TabOrder = 6
+          OnClick = BtLoginClick
+        end
+      end
+    end
+    object TabSheet2: TTabSheet
+      Caption = 'TabSheet2'
+      ClientHeight = 409
+      ClientWidth = 810
+      object StringGrid1: TStringGrid
+        Left = 112
+        Height = 380
+        Top = 0
+        Width = 688
+        TabOrder = 0
+      end
+    end
+  end
+  object BtFechar: TButton
+    Left = 736
+    Height = 25
+    Top = 408
+    Width = 75
+    Caption = 'Fechar'
+    TabOrder = 1
+    OnClick = BtLoginClick
+  end
+end
