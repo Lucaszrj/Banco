@@ -135,22 +135,14 @@ object Principal: TPrincipal
       Caption = 'TabSheet2'
       ClientHeight = 409
       ClientWidth = 810
-      object StringGrid1: TStringGrid
-        Left = 112
-        Height = 380
-        Top = 0
-        Width = 688
-        ColCount = 4
-        Columns = <        
-          item
-            Title.Caption = 'Title'
-          end        
-          item
-            Title.Caption = 'Title'
-          end        
-          item
-            Title.Caption = 'Title'
-          end>
+      object DBGrid1: TDBGrid
+        Left = 120
+        Height = 364
+        Top = 8
+        Width = 680
+        Color = clWindow
+        Columns = <>
+        DataSource = DataSource1
         TabOrder = 0
       end
     end
@@ -163,5 +155,16 @@ object Principal: TPrincipal
     Caption = 'Fechar'
     TabOrder = 1
     OnClick = BtLoginClick
+  end
+  object DataSource1: TDataSource
+    DataSet = JSONDataSet1
+    OnDataChange = DataSource1DataChange
+    Left = 24
+    Top = 368
+  end
+  object JSONDataSet1: TJSONDataSet
+    FieldDefs = <>
+    Left = 80
+    Top = 368
   end
 end

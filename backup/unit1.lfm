@@ -140,6 +140,17 @@ object Principal: TPrincipal
         Height = 380
         Top = 0
         Width = 688
+        ColCount = 4
+        Columns = <        
+          item
+            Title.Caption = 'Title'
+          end        
+          item
+            Title.Caption = 'Title'
+          end        
+          item
+            Title.Caption = 'Title'
+          end>
         TabOrder = 0
       end
     end
